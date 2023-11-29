@@ -41,7 +41,7 @@ document.querySelector('.check').addEventListener('click', function () {
             score--;
             document.querySelector('.score').textContent = score;
         } else {
-            displayMessage('You Lose !!!');
+            displayMessage('You Lose !!!!');
             document.querySelector('.score').textContent = 0;
         }
     }
