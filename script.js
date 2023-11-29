@@ -1,6 +1,9 @@
 'use strict';
 // Genarate Random Value
-let secretNumber = Math.trunc(Math.random() * 20) + 1;
+function generateSecretNumber() {
+    return Math.trunc(Math.random() * 20) + 1;
+}
+let secretNumber = generateSecretNumber();
 console.log(secretNumber);
 // Game Score
 let score = 20;
@@ -11,7 +14,7 @@ const displayMessage = function (message) {
 //Again Button
 document.querySelector('.again').addEventListener('click', function () {
     score = 20;
-    secretNumber = Math.trunc(Math.random() * 20) + 1;
+    secretNumber = generateSecretNumber();
     document.querySelector('.score').textContent = score;
     displayMessage('Start guessing...');
     document.querySelector('body').style.backgroundColor = '#222';
